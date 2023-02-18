@@ -1,4 +1,4 @@
-A Flutter component package that simplify application state management.
+Easy State Management for Flutter apps using component.
 
 ## Features
 
@@ -42,6 +42,6 @@ class Counter extends Component<int> {
 
 ## Other examples
 
-[**Shopping Cart**](https://github.com/aymentoumi/component/tree/master/other_examples/shopping_cart)
+[**Shopping Cart**](https://github.com/aymentoumi/esm/tree/master/other_examples/shopping_cart)
 
-![image](https://raw.githubusercontent.com/aymentoumi/component/master/other_examples/shopping_cart/capture.gif)
+![image](https://raw.githubusercontent.com/aymentoumi/esm/master/other_examples/shopping_cart/capture.gif)

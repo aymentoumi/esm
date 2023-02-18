@@ -1,4 +1,4 @@
-library component;
+library esm;
 
 import 'package:event/event.dart';
 import 'package:eventsubscriber/eventsubscriber.dart';

@@ -39,7 +39,7 @@ dependencies:
   velocity_x:
   equatable:
 
-  component:
+  esm:
     path: ../..
 
 dev_dependencies:

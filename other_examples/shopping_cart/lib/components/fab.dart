@@ -1,4 +1,4 @@
-import 'package:component/component.dart';
+import 'package:esm/esm.dart';
 import 'package:flutter/material.dart';
 import 'package:shopping_cart/models/item.dart';
 

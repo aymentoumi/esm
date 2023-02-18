@@ -1,5 +1,5 @@
-name: component
-description: A Flutter component package that simplify application state management.
+name: esm
+description: A Flutter package to simplify application state management.
 version: 1.0.0
 homepage: https://github.com/aymentoumi/component
 

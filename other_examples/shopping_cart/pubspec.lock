@@ -49,13 +49,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.17.0"
-  component:
-    dependency: "direct main"
-    description:
-      path: "../.."
-      relative: true
-    source: path
-    version: "1.0.0"
   cupertino_icons:
     dependency: "direct main"
     description:
@@ -72,6 +65,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.5"
+  esm:
+    dependency: "direct main"
+    description:
+      path: "../.."
+      relative: true
+    source: path
+    version: "1.0.0"
   event:
     dependency: transitive
     description:
