@@ -1,4 +1,5 @@
-Easy State Management for Flutter apps using component.
+ESM (Easy State Management)
+A Flutter package to simplify application state management using component.
 
 ## Features
 
