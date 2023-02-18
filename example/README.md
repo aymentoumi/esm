@@ -2,4 +2,4 @@
 
 A counter app devloped using Flutter component package.
 
-![image](https://raw.githubusercontent.com/aymentoumi/component/master/example/capture.gif)
+![image](https://github.com/aymentoumi/component/blob/a54e8d0ecb5cc314f00e2c36c199539816791c74/example/capture.gif)
