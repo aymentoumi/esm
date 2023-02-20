@@ -7,3 +7,7 @@
 - Change state builder extension name function to $.
 - Add optional VoidCallback parameter to state update function.
 - Update example projects.
+
+## 1.1.0+1
+
+- Fix package homepage.
