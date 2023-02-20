@@ -5,6 +5,8 @@ import 'package:shopping_cart/cart_app.dart';
 class Header extends Component<String> {
   const Header(super.state, {super.key});
 
+  String get _title => state.value;
+
   @override
   Widget render(BuildContext context) => AppBar(
         leading: context.url == '/cart'
@@ -12,16 +14,17 @@ class Header extends Component<String> {
                 onPressed: () => context.url = '/',
                 icon: const Icon(Icons.home))
             : null,
-        title: Text(state.value),
+        title: Text(_title),
         centerTitle: true,
         actions: [
           Switch(
-              value: context.app<CartApp>().theme.value == ThemeData.dark(),
-              onChanged: ((value) {
-                context.app<CartApp>().theme.value =
-                    value ? ThemeData.dark() : ThemeData.light();
-                refresh();
-              }))
+            value: context.app<CartApp>().theme == ThemeData.dark(),
+            onChanged: ((value) {
+              context.app<CartApp>().theme =
+                  value ? ThemeData.dark() : ThemeData.light();
+              refresh();
+            }),
+          )
         ],
       );
 }

@@ -6,7 +6,8 @@ class AppTheme extends Component<ThemeData> {
 
   const AppTheme(super.state, Widget child, {super.key}) : _child = child;
 
+  ThemeData get _theme => state.value;
+
   @override
-  Widget render(BuildContext context) =>
-      Theme(data: state.value, child: _child);
+  Widget render(BuildContext context) => Theme(data: _theme, child: _child);
 }

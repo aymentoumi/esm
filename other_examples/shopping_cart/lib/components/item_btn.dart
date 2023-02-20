@@ -20,7 +20,7 @@ class ItemBtn extends Component<Item> {
           Item.cart.remove(_item);
         }
         refresh();
-        context.app<CartApp>().fabVisibility.value =
+        context.app<CartApp>().fabVisibility =
             Item.cart.isNotEmpty && context.url == '/';
       });
 }

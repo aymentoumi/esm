@@ -11,7 +11,7 @@ import 'package:flutter/material.dart';
 /// Sample use :
 /// ```dart
 /// class Counter extends Component<int> {
-///   const Counter(super.state, {super.key});
+///   const Counter(0.$, {super.key});
 ///
 ///   @override
 ///   Widget render(BuildContext context) {
@@ -74,31 +74,34 @@ class _Args<T> extends EventArgs {
 /// [T] state class.
 ///
 class State<T> {
-  late final _Args<T> _args;
+  T _value;
   final _event = Event<_Args<T>>();
 
   ///
   /// Create new state for [value].
   ///
-  State(T value) : _args = _Args(value);
+  State(T value) : _value = value;
 
   ///
   /// Get state's [value].
   ///
-  T get value => _args.value;
+  T get value => _value;
 
   ///
   /// Set state's [value] and refresh component widget.
   ///
   set value(T val) {
-    _args.value = val;
-    _event.broadcast(_args);
+    _value = val;
+    _event.broadcast(_Args<T>(_value));
   }
 
   ///
   /// Notify state's retated components to refresh widget.
   ///
-  void update() => _event.broadcast();
+  void update([VoidCallback? fn]) {
+    if (fn != null) fn();
+    _event.broadcast();
+  }
 }
 
 ///
@@ -176,7 +179,7 @@ extension ComponentContext on BuildContext {
 
 extension StateBuilder<T> on T {
   ///
-  /// Build a state for [T] object.
+  /// Create a state for [T] object.
   ///
-  State<T> get state => State<T>(this);
+  State<T> get $ => State<T>(this);
 }

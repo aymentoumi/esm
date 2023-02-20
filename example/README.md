@@ -1,5 +1,5 @@
 # Counter
 
-A counter app devloped using Flutter component package.
+A counter flutter app developed using [component](https://pub.dev/packages/esm).
 
-![image](https://github.com/aymentoumi/esm/blob/6b75c27fabcfac5bff8ea5201f4959f7c6b10e00/example/capture.gif)
+![image](https://raw.githubusercontent.com/aymentoumi/esm/master/example/capture.gif)

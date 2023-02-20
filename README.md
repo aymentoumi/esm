@@ -40,6 +40,7 @@ class Counter extends Component<int> {
   }
 }
 ```
+![image](https://raw.githubusercontent.com/aymentoumi/esm/master/example/capture.gif)
 
 ## Other examples
 

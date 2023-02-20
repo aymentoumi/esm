@@ -9,9 +9,16 @@ import 'package:shopping_cart/pages/home_page.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class CartApp extends Application {
-  final headerTitle = ''.state;
-  final fabVisibility = false.state;
-  final theme = ThemeData.dark().state;
+  final _headerTitle$ = ''.$;
+  final _fabVisibility$ = false.$;
+  final _theme$ = ThemeData.dark().$;
+
+  set headerTitle(String title) => _headerTitle$.value = title;
+
+  set fabVisibility(bool visible) => _fabVisibility$.value = visible;
+
+  set theme(ThemeData data) => _theme$.value = data;
+  ThemeData get theme => _theme$.value;
 
   @override
   Widget render(BuildContext context) {
@@ -19,27 +26,27 @@ class CartApp extends Application {
 
     switch (context.url) {
       case '/':
-        headerTitle.value = 'HOME';
+        headerTitle = 'HOME';
         body = const HomePage();
         break;
       case '/cart':
-        headerTitle.value = 'CART (${Item.cart.length})';
-        body = CartPage(Item.cart.state);
+        headerTitle = 'CART (${Item.cart.length})';
+        body = CartPage(Item.cart.$);
         break;
       default:
-        headerTitle.value = '404';
+        headerTitle = '404';
         body = const Text('NOT FOUND!').centered();
     }
 
-    fabVisibility.value = Item.cart.isNotEmpty && context.url == '/';
+    fabVisibility = Item.cart.isNotEmpty && context.url == '/';
 
     return AppTheme(
-        theme,
+        _theme$,
         Scaffold(
-          appBar: (Header(headerTitle))
+          appBar: (Header(_headerTitle$))
               .preferredSize(const Size.fromHeight(kToolbarHeight)),
           body: body,
-          floatingActionButton: Fab(fabVisibility),
+          floatingActionButton: Fab(_fabVisibility$),
         ));
   }
 }

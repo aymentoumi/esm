@@ -20,7 +20,7 @@ class CartPage extends Component<List<Item>> {
                 onPressed: () {
                   _cart.remove(e);
                   refresh();
-                  context.app<CartApp>().headerTitle.value =
+                  context.app<CartApp>().headerTitle =
                       'CART (${Item.cart.length})';
                 }),
           );

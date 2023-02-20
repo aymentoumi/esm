@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
           return ListTile(
             title: Text(e.name ?? ''),
             subtitle: Text(e.price ?? ''),
-            trailing: ItemBtn(e.state),
+            trailing: ItemBtn(e.$),
           );
         }).toList(),
       );

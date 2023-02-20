@@ -1,5 +1,5 @@
 # Shopping Cart
 
-A shopping cart app devloped using Flutter component package.
+A shopping cart flutter app developed using [component](https://pub.dev/packages/esm).
 
-![image](https://github.com/aymentoumi/esm/blob/6b75c27fabcfac5bff8ea5201f4959f7c6b10e00/other_examples/shopping_cart/capture.gif)
+![image](https://raw.githubusercontent.com/aymentoumi/esm/master/other_examples/shopping_cart/capture.gif)
